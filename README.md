@@ -59,7 +59,7 @@ Open the file named PostmanApi and import the EkkBazApi.postman_collection.json 
 #### User login
 
 ```http
-  GET /users/login
+  POST /users/login
 ```
 
 | Parameter | Type     | Description                       |
@@ -70,7 +70,7 @@ Open the file named PostmanApi and import the EkkBazApi.postman_collection.json 
 #### Verify jwt token
 
 ```http
-  GET /users/verify
+  POST /users/verify
 ```
 
 | Parameter | Type     | Description                       |
