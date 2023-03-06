@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - yarn install
+  pre_build:
+    commands:
+      - yarn run lint
+  build:
+    commands:
+      - yarn run build
+      - docker build -t my-express-app .
+      - docker tag my-express-app:latest aws_account_id.dkr.ecr.us-east-1.amazonaws.com/my-express-app:latest
+  post_build:
+    commands:
+      - $(aws ecr get-login --no-include-email)
+      - docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/my-express-app:latest
+artifacts:
+  files:
+    - '**/*'

@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "8a7bb208-193c-4379-84b8-476f1af7b493",
+		"name": "EkkBazApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9798281"
+	},
+	"item": [
+		{
+			"name": "verify jwt token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDA1YWRlZTYyNTZmMjZlYmNiMzVkMmUiLCJuYW1lIjoiRmFoaW0gSGFzYW4iLCJlbWFpbCI6ImZhaGltaGFzYW4uc29mdHdhcmVkZXZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkc3Y5WTFIaExmQnZpU2pMZXpYSnJKZWFINlAyVTc1cUpXRW4uWnh0STFSV2ozWkNkRTdKTEMiLCJfX3YiOjAsImlhdCI6MTY3ODA5Mzg2M30.fdecCR1IJn9iClRwSUF-5hxj3Kb8VtyfyS_l4ajXsCU\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/verify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"fahimhasan.softwaredev@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Fahim Hasan\",\r\n    \"email\":\"fahimhasan.softwaredev@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
