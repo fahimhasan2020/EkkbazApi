@@ -24,7 +24,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         npm run build
-        docker build -t my-express-app .
-        docker tag my-express-app:latest aws_account_id.dkr.ecr.us-east-1.amazonaws.com/my-express-app:latest
+        docker build -t ekkbazapi:v2 .
+        docker tag ekkbazapi:v2 aws_account_id.dkr.ecr.us-east-1.amazonaws.com/ekkbazapi:v2
         $(aws ecr get-login --no-include-email)
-        docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/my-express-app:latest
+        docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/ekkbazapi:v2

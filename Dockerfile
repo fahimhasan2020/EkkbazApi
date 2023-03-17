@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install dependencies
 RUN yarn install
 
+RUN yarn global add nodemon
+
+
 # Copy the rest of the application code to the working directory
 COPY . .
 
@@ -18,3 +21,5 @@ EXPOSE 3000
 
 # Start the app
 CMD [ "yarn", "start" ]
+
+
